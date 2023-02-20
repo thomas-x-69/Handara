@@ -1,0 +1,667 @@
+  <!DOCTYPE html>
+  <html dir="rtl" lang="ar">
+    <head>
+      <meta charset="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- title -->
+      <title>Handara</title>
+      <!-- Render All Elements Normally -->
+      <link rel="stylesheet" href="css/normalize.css"/>
+      <!-- Font Awesome Library -->
+      <link rel="stylesheet" href="css/all.min.css"/>
+      <!-- Main CSS File -->
+      <link rel="stylesheet" href="css/handara.css"/>
+
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700&display=swap"
+        rel="stylesheet"
+      />
+      <!-- page Icon -->
+  <link rel="shortcut icon" href="/images/siteIcon.png" type="image/x-icon">
+      <!-- <link rel="shortcut icon" href="" type="image/x-icon" /> -->
+    </head>
+    <body>
+      <!-- start header -->
+      <div class="header" id="header">
+        <div class="container">
+          <ul class="main-nav">
+            <a href="#nav-list-mobile"><i class="fa-solid fa-bars"></i></a>
+            <li><a href="/avatar page/avatar.html">انشئ الافاتار الخاص بك + </a></li>
+            <a href="#user+"><i class="fa-solid fa-user-plus"></i>  </i></a>
+          </ul>
+          <a href="/handara.html" class="logo">
+            <img src="/images/Handara3.png" alt="" />
+          </a>
+          <div class="left-nav">
+            
+            <a href="#logIn">تسجيل دخول</a>
+            <a href="#cart"><i class="fa-solid fa-basket-shopping"></i></a>
+            <div id="open1" class="dialog">
+  
+              <p style="
+              text-align: center;
+              font-size: 15px;
+              ">سله المشتريات</p>     
+              </div>
+              <a href="#Favourites"><i class="fa-regular fa-heart"></i></a>
+              <div id="open1" class="dialog-2">
+    
+                <p style="
+                text-align: center;
+                ">المفضله</p>     
+                </div>
+          </div>
+
+          <form class="search-box">
+            <button style="background: none; border: none;     padding: 4px 0PX 7PX 3PX;
+      MARGIN-LEFT: -2PX;
+            ">
+              <span
+                style="font-size: 25px; color: grey
+                "
+                class="material-symbols-outlined"
+              ><i class="fa-solid fa-magnifying-glass"></i></span>
+            </button>
+            <input
+              type="search"
+              name="focus"
+              placeholder="ابحث عن ما تريد"
+              id="search-input"
+              value=""
+            />
+          </form>
+            
+        </div>
+        <div class="categories-nav"> 
+          <ul class="extra">
+            <li><a href="#whatsNew">ما هو الجديد</a></li>
+            <li><a href="#sales">تخفيضات</a></li>
+            <li><a href="#jeweleries">جواهر و اكسسوارات</a></li>
+            <li><a href="#clothes">ملابس</a></li>
+            <li><a href="#home">المنزل والمعيشه</a></li>
+            <li><a href="#art">فنون ومقتنيات</a></li>
+            <li><a href="#gift boxes">صناديق هدايا</a></li>
+            <li><a href="#others">اخري</a></li></div> 
+          </ul>
+        </div>
+      </div> 
+      <!-- End header -->
+         <!-- start image-slider -->
+            
+            <div class="image-slider">
+
+              
+              <!-- Next and previous buttons -->
+              <!-- <p class="landing-text">تصفح العديد والعديد من الهدايا</p>
+                <button class="landing-button">تسوق الان</button> -->
+                
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+            
+                <div style="
+                width: auto;
+                position: absolute;
+                bottom: 112px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                color: white;
+            " class="dots-container">
+                
+                
+                
+                
+                <h2 style="
+            color: var(--yellow-main-color);
+            font-size: 42px;
+            text-align: center;
+            text-shadow: 1.2px 1.2px 1px black;
+            ">اكتشف افضل منتجات الصناعات اليدوية </h2><button style="
+                padding: 12px 18px;
+                font-size: 19px;
+                width: max-content;
+                bottom: 10px;
+                color: var(--yellow-main-color);
+                border: solid var(--yellow-main-color);
+                font-weight: bold;
+                border-radius: 9px;
+            ">تسوق الان
+            </button>
+              </div>
+
+
+
+
+                <!-- The dots/circles -->
+                <div class="dots-container">
+      <span class="dots" onclick="currentSlide(1)"></span>
+      <span class="dots" onclick="currentSlide(2)"></span>
+      <span class="dots" onclick="currentSlide(3)"></span>
+      <span class="dots" onclick="currentSlide(4)"></span>
+      <span class="dots" onclick="currentSlide(5)"></span>
+    </div>
+    
+    <!-- <video loop muted autoplay>
+      <source src="/images/_411.mp4">
+    </video> -->
+    
+    
+    <div class="carousel-container">
+      <div class="mySlides animate">
+        
+        <video loop muted autoplay>
+          <source src="images/_411.mp4" type="video/mp4">
+        </video>  
+      </div>
+
+      <div class="mySlides animate">
+        <img src="/images/slide-img2.jpg" alt="slide" />
+      </div>
+      
+      <div class="mySlides animate">
+      <img src="/images/slide-img3.jpg" alt="slide" />
+    </div>
+    
+    <div class="mySlides animate">
+      <img src="/images/slide-img4.jpg" alt="slide" />
+    </div>
+    
+    <div class="mySlides animate">
+      <video loop muted autoplay>
+        <source src="/images/production ID_3755533.mp4" type="video/mp4">
+      </video>  
+    </div>
+    
+  </div>
+  </div>
+
+  <!-- End image-slider -->
+
+  <!-- start categories -->
+  <div class="categories" id="categories">
+    <h1>تسوق حسب الفئات </h1>
+    <div class="container">
+      
+      <div class="categories-boxes">
+        
+  <a href="#" class="box 1">
+    <i class="fa-solid fa-fire"></i>
+    <p>الأكثر رواجاً</p>
+  </a>
+  <a href="#" class="box 2">
+    <i class="fa-regular fa-star"></i>
+    <p>الأعلي تقييماً</p>
+  </a>
+  <a href="#" class="box 3">
+    <i class="fa-regular fa-gem"></i>
+    <p>جواهر واكسسوارات</p>
+  </a>
+  <a href="#" class="box 4">
+    <i class="fa-solid fa-shirt"></i>
+    <p>ملابس</p>
+  </a>
+  <a href="#" class="box 5">
+    <i class="fa-solid fa-house-chimney"></i>
+    <p>ديكور المنزل</p>
+  </a>
+  <a href="#" class="box 6">
+    <i class="fa-solid fa-user-pen"></i>
+    <p>هدايا مخصصه</p>
+  </a>
+  <a href="#" class="box 7">
+    <i class="fa-solid fa-mars"></i>
+    <p>هدايا لأجله</p>
+  </a>
+  <a href="#" class="box 8">
+    <i class="fa-solid fa-venus"></i>
+    <p>هدايا لأجلها</p>
+  </a>
+  <a href="#" class="box 9">
+    <i class="fa-solid fa-ring"></i>
+    <p>هدايا زفاف</p>
+  </a>
+  <a href="#" class="box 10">
+    <i class="fa-regular fa-calendar-days"></i>
+    <p>هدايا ذكرى سنوية</p>
+  </a>
+
+  </div>
+
+  </div>
+  </div>
+  <!-- End categories -->
+
+  <!-- start for-you -->
+
+  <div class="for-you" id="for-you">
+    <h1> تسوق في مختارات لأجلك</h1>
+    <div class="container">
+    
+    
+        <div class="products">
+          <div class="box1">
+            <img src="/images/slide-Img.jpg" alt="">
+          </div>
+          <div class="box2">
+            
+            <img src="/images/slide-Img.jpg" alt="">
+          </div>
+          <div class="box3">
+            
+            <img src="/images/slide-Img.jpg" alt="">
+          </div>
+          <div class="box4">
+            
+            <img src="/images/slide-Img.jpg" alt="">
+            <span class="price"></span>
+          </div>
+          <div class="box5">
+            
+            <img src="/images/slide-Img.jpg" alt="">
+            
+            <span class="price"></span>
+          </div>
+          <div class="box6">
+            
+            <img src="/images/slide-Img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>  
+
+
+  <!-- End for-you -->
+
+  <!-- start popular  -->
+
+  <div class="popular" id="popular">
+    <h1> اكتشف المنتجات الاكثر شعبيه</h1>
+    <div class="container">
+      <div class="products">
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/17120265/r/il/24140e/2278829966/il_794xN.2278829966_jw8a.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>نجفه حلزونيه خشب</h1>
+              <p>250.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight:200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper" id="#">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/16560268/r/il/4d1db8/3273551464/il_794xN.3273551464_e8vy.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                    <h2>دمية دب كروشيه</h1>
+              <p>75.00</p><p>جنيه</p>
+            </div>                  
+            <div class="buy" onclick="this.style = 'width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+        
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/14789656/r/il/dbcb4f/1314651059/il_1140xN.1314651059_63r1.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>لوحة جداريه فن حديث </h1>
+              <p>200.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+          
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/5223966/r/il/1090af/2051944999/il_794xN.2051944999_qb3o.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>لوحه الوان زيتيه ملونة</h1>
+              <p>350.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+        
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/36837319/r/il/f79e91/4207797469/il_1140xN.4207797469_smoa.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>سجاد للمطبخ اشكال هندسيه صغيره</h1>
+              <p>300.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+  
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/21306173/r/il/4e1e67/3518947720/il_794xN.3518947720_eaf1.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>منحوتة البومة الليليه</h1>
+              <p>200.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+          
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/32041253/r/il/220906/4244248793/il_794xN.4244248793_gcmp.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>برطمان 50 رساله تحفيزية</h1>
+              <p>50.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = 'width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+      
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/28575344/r/il/d75c47/3207643365/il_794xN.3207643365_au46.jpg" >
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>قلادة تخصيص اسم</h1>
+              <p>170.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+        
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper">
+          <div class="pcontainer">
+            <img class="top" src="https://i.etsystatic.com/12504158/r/il/d9e7d8/3512527645/il_794xN.3512527645_1i5m.jpg">
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>صورة خياطة كروس قطنيه</h1>
+              <p>150.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+          
+  </div>
+
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+        <div class="wrapper" id="">
+          <div class="pcontainer">
+            <img class="top" src="" alt="   .... خطأ في تحميل صورة المنتج" >
+    <div class="bottom">
+              <div class="left">
+                <div class="details">
+                  <h2>زهريه فخار</h1>
+              <p>99.00</p><p>جنيه</p>
+            </div>
+            <div class="buy" onclick="this.style = '       width: 72px;     color:white;     background-color: rgb(0, 140, 112); ', this.parentNode.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #00b5a5;' "><i class="fa-solid fa-check"></i><i class="fa-solid fa-cart-plus"></i></div>
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="inside">
+        <div class="icon"><i class="fa-regular fa-heart" onclick="this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') !=='#3'?
+        (this.style = 'font-weight: 900;color: red;', this.parentNode.parentNode.parentNode.setAttribute('id', '#1'),this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        (this.parentNode.parentNode.parentNode.style = 'box-shadow: 0 0 24px 4px #fe2d2d;')
+      //   :this.parentNode.parentNode.parentNode.getAttribute('id')!=='#1'&&this.parentNode.parentNode.parentNode.getAttribute('id') ==='#2'||this.parentNode.parentNode.parentNode.getAttribute('id') ==='#3'
+      // ?  (this.style = 'font-weight: 900;color: red;',this.parentNode.parentNode.style = 'background: var(--grey-main-color);')
+        // :this.parentNode.parentNode.parentNode.getAttribute('id')==='#1'
+      :  (this.style = 'font-weight: 200;color: transparent;', this.parentNode.parentNode.parentNode.setAttribute('id', ''),this.parentNode.parentNode.style = 'background: none;') "></i></div>
+
+      </div>
+    </div>
+    
+      </div>
+      <a href="#" class="more">شاهد المزيد<i class="fa-solid fa-arrow-left"></i></a>
+    </div>
+  </div>
+  <!-- End popular  -->
+  <!-- start footer -->
+  <footer>
+   <!-- -------------------------------------- zipper start--------------------------------------------- -->
+   <!-- <div class="before">
+     <div class="before-son">
+    </div></div>
+    <div class="after">
+      <div class="after-son"></div></div>
+      <div class="zipper"><img src="/images/ZIPPERHEAD.jpg" alt=""></div>
+       -->
+      <!-- -------------------------------------- zipper End--------------------------------------------- -->
+
+    <section class="footer">
+
+      <div class="about">
+        <div class="h5">معلومات عننا</div>
+        <a href="#">حول هاندارا</a>
+        <a href="#">فرص التوظيف</a>
+        <a href="#">البيع معنا</a>
+      </div>
+      <div class="help-senter">
+        <div class="h5">مركز المساعده</div>
+        <a href="#">كيفية الطلب</a>
+        <a href="#">كيف تتبع طلبك</a>
+        <a href="#">معلومات الشحن</a>
+        <a href="#">المنتجات المسترجعه</a>
+        <a href="#">الاسئله المتكرره</a>
+        <a href="#"> هاندارا vip</a>
+      </div>
+      <div class="Customer-service">
+        <div class="h5">خدمة الزبائن</div>
+        <a href="#">طريقة الدفع</a>
+        <a href="#">الدفع عند الإستلام</a>
+        <a href="#">بطاقة هدية</a>
+      </div>
+      <div class="subscribe">
+        <div class="h5">اشترك الان مجانا ليصلك احدث العروض</div>
+        <div class="newsletter">
+          <input type="email" name="email" placeholder="عنوان بريدك الالكتروني" id="txtEmail">
+          <button type="submit" name="submit" onclick="onClickBtn()">ارسال</button>
+        </div>
+      </div>
+      <div class="brand">
+        <div class="h5">تابعنا عبر </div>
+        <div class="social">
+          <a href="#fb" class="social-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#instagram" class="social-icon">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#youtube" class="social-icon">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#pinterest" class="social-icon">
+            <i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#twitter" class="social-icon">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+      </div>
+      <div class="app">
+        <div class="h5">حمل تطبيقنا الان</div>
+        <div class="social">
+          <a href="#googlePlay" class="social-icon">
+            <i class="fa-brands fa-android"></i>
+                  </a>
+          <a href="#appStore" class="social-icon">
+            <i class="fa-brands fa-apple"></i>
+                            </a>
+          </div>
+      </div>
+      <div class="app">
+        <div class="h5">نقبل الدفع عبر</div>
+        <div class="money"> <img src="//img.ltwebstatic.com/images3_pi/2021/03/09/161528368123dd7a35ad8708b0dfc74b3630526891.png">
+          <img  src="//img.ltwebstatic.com/images2_pi/2018/06/06/15282732803587566708.png" data-was-processed="true">
+          </div>
+      </div>
+    </section>
+
+    <section class="copyright">
+      <p><span></span><script>document.write(new Date().getFullYear())</script>
+         Handara ,جميع الحقوق محفوظة©</p>
+      <p>
+        <!-- <a href="#language"><i class="fa-solid fa-globe"></i></a>
+        | -->
+        <a href="#privacy">سياسة الضمان</a>
+        |
+        <a href="#terms">شروط الاستخدام</a>
+        |
+        <a href="#security">شروط البيع</a>
+        |
+        <a href="#security">سياسة الخصوصية</a>
+        
+      </p>
+    </section>
+  </footer>
+
+  <div></div>
+
+  <!-- End footer -->
+  <!-- start scroll to top -->
+
+
+  <span class="help">الدعم<i class="fa-regular fa-comment"></i></span>
+  <span class="up"><i class="fa-solid fa-arrow-up"></i></span>
+  <!-- End scroll to top -->
+
+  <!-- js main-file -->
+  <script src="/js/handara.js"></script>
+
+    </body>
+    </html>   
