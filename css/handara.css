@@ -271,7 +271,7 @@ i {
   }
 }
 .header .main-nav:first-of-type li a {
-  padding: 6px;
+  padding: 2px;
   background-color: var(--grey-main-color);
   margin: 2px;
   border-radius: 26px;
