@@ -531,8 +531,6 @@ h1 {
 }
 .choose-container {
   width: 100px;
-
-  background-color: #ffffff;
   box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
   border-radius: 8px;
   position: relative;
@@ -569,14 +567,15 @@ input[type="checkbox"]:checked:after {
   color: #478bfb;
 }
 .choose-container img {
-  width: 70%;
+  width: 100%;
   position: relative;
-  margin: auto;
+  margin: 0px;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   cursor: pointer;
+  border-radius: 100%;
 }
 /* start footer */
 
@@ -864,4 +863,8 @@ footer a:hover::before {
 #startBtn:hover {
   background-color: #647c90;
   color: red;
+}
+label {
+  font-size: large;
+  font-weight: bold;
 }
