@@ -1166,6 +1166,25 @@ input:focus {
 .popular .container .more:hover {
   background-color: #515f78;
 }
+.try-now {
+  color: white;
+  background-color: var(--grey-main-color);
+  padding: 15px 15px;
+  position: relative;
+  display: block;
+  width: fit-content;
+  font-size: 18px;
+  border-radius: 7px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  margin: auto;
+}
+.try-now:hover {
+  background-color: #515f78;
+}
 
 /* End popular */
 
