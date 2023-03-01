@@ -730,11 +730,12 @@ input:focus {
   gap: 15px;
 }
 .box {
+  overflow: hidden;
   background: rgb(232, 232, 232);
   width: 100%;
   height: 90px;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: black;
   display: flex;
@@ -760,18 +761,171 @@ input:focus {
   -ms-transform: scale(1.02);
   -o-transform: scale(1.02);
 }
+
+.box:hover .cls-1 {
+  fill: #fc7226;
+  transition: 0.6s;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+.box:hover .cls-2 {
+  transition: 0.6s;
+  fill: #fc8223;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+.box:hover .cls-3 {
+  transition: 0.6s;
+  fill: #fc8223;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+.box:hover .cls-4 {
+  transition: 0.6s;
+  fill: #fc9823;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+
 .box p {
   max-width: 120px;
 }
 .box i {
   font-size: 35px;
 }
+.cat-panel {
+  display: grid;
+  gap: 34px;
+  transform: translate(8px, 65px);
+  transition: ease 1s;
+  -webkit-transition: ease 1s;
+}
+.box:hover .cat-panel {
+  transform: translate(8px, -39px);
+  -webkit-transform: translate(8px, -39px);
+  -moz-transform: translate(8px, -39px);
+  -ms-transform: translate(8px, -39px);
+  -o-transform: translate(8px, -39px);
+  -webkit-transition: ease 1s;
+  -moz-transition: ease 1s;
+  -ms-transition: ease 1s;
+  -o-transition: ease 1s;
+}
+.cat-panel img {
+  width: 145px;
+}
+.cat-panel i {
+  transform: translate(-50px, 0px);
+  -webkit-transform: translate(-50px, 0px);
+  -moz-transform: translate(-50px, 0px);
+  -ms-transform: translate(-50px, 0px);
+  -o-transform: translate(-50px, 0px);
+  font-size: 45px;
+}
 /* End categories */
+
+.example {
+  width: 45px;
+  margin: 0px -25px 15px -37px;
+}
+
+@keyframes circles {
+  50% {
+    transform: translateY(-6em) scale(1, 1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flame {
+  to {
+    transform-origin: bottom center;
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes sideFlame {
+  100% {
+    transform-origin: bottom left;
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes sideFlame1 {
+  100% {
+    transform-origin: bottom right;
+    transform: rotate(4deg);
+    /*       transform: translateY(-.5em); */
+  }
+}
+
+.box:hover .cirGroup1 {
+  animation: 0.4s circles infinite;
+  -webkit-animation-name: circles;
+  -webkit-animation-duration: 0.4s;
+  -webkit-animation: 0.4s circles infinite;
+}
+
+.box:hover .cirGroup2 {
+  animation: 0.7s circles infinite;
+  -webkit-animation-name: circles;
+  -webkit-animation-duration: 0.7s;
+  -webkit-animation: 0.7s circles infinite;
+}
+
+.box:hover .cirGroup3 {
+  animation: 1.5s circles infinite;
+  -webkit-animation-name: circles;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation: 1.5s circles infinite;
+}
+
+.box:hover .flame {
+  -webkit-animation-name: flame;
+  -webkit-animation-duration: 0.5s;
+  animation: flame 0.5s ease-in-out infinite alternate;
+  -webkit-animation: flame 0.5s ease-in-out infinite alternate;
+}
+
+.box:hover .flame2 {
+  -webkit-animation-name: flame;
+  -webkit-animation-duration: 0.4s;
+  animation: flame 0.4s ease-in-out infinite alternate;
+  -webkit-animation: flame 0.4s ease-in-out infinite alternate;
+}
+
+.box:hover .flame3 {
+  -webkit-animation-name: flame;
+  -webkit-animation-duration: 0.6s;
+  animation: flame 0.6s ease-in-out infinite alternate;
+  -webkit-animation: flame 0.6s ease-in-out infinite alternate;
+}
+
+.box:hover .sideFlame1 {
+  -webkit-animation-name: sideFlame1;
+  -webkit-animation-duration: 0.9s;
+  animation: sideFlame1 0.9s ease-in-out infinite alternate;
+  -webkit-animation: sideFlame1 0.9s ease-in-out infinite alternate;
+}
+
+.box:hover .sideFlame {
+  -webkit-animation-name: sideFlame1;
+  -webkit-animation-duration: 0.5s;
+  animation: sideFlame 0.5s ease-in-out infinite alternate;
+  -webkit-animation: sideFlame 0.5s ease-in-out infinite alternate;
+}
 
 /* start for-you */
 
-.for-you {
-}
 .for-you .container {
   margin: 70px 50px;
   min-width: fit-content;
