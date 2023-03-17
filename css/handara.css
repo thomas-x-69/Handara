@@ -23,15 +23,15 @@ html {
   scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
-  width: 12px; /* width of the entire scrollbar */
+  width: 12px;
 }
 body::-webkit-scrollbar-track {
-  background: var(--grey-main-color); /* color of the tracking area */
+  background: var(--grey-main-color);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--yellow-main-color); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 3px solid var(--grey-main-color); /* creates padding around scroll thumb */
+  background-color: var(--yellow-main-color);
+  border-radius: 20px;
+  border: 3px solid var(--grey-main-color);
 }
 body {
   font-family: "Cairo", sans-serif;
@@ -54,7 +54,6 @@ a {
 i {
   padding-left: 7px;
   padding-right: 7px;
-  /* width: 10px; */
 }
 @media (max-width: 768px) {
   i {
@@ -85,6 +84,7 @@ i {
 }
 
 /* End Global Rules */
+
 /* Start Header */
 .header {
   background-color: transparent;
@@ -115,6 +115,7 @@ i {
   flex-wrap: wrap;
   position: relative;
   flex-direction: row;
+  margin: 5px auto 0px auto;
 }
 
 .left-nav a[href="#user"] i:nth-child(1) {
@@ -148,9 +149,9 @@ i {
   -o-border-radius: 27px;
 }
 
-.left-nav .dialog {
+.left-nav .dialog-cart {
   background: var(--yellow-main-color);
-  bottom: 10px;
+  bottom: 5px;
   color: var(--grey-main-color);
   display: block;
   left: 17px;
@@ -161,18 +162,23 @@ i {
   width: 125px;
   border-radius: 50px;
   height: 39px;
-  transform: translateY(-35px);
+  transform: translateY(-8px);
   transition: all 0.3s ease-out 0s;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
-  -webkit-transform: translateY(-35px);
-  -moz-transform: translateY(-35px);
-  -ms-transform: translateY(-35px);
-  -o-transform: translateY(-35px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
 }
-.left-nav .dialog:before {
+.left-nav .dialog-cart p,
+.left-nav .dialog-fav p {
+  text-align: center;
+  font-size: 16px;
+}
+.left-nav .dialog-cart:before {
   content: "";
   margin: auto;
   position: absolute;
@@ -189,9 +195,9 @@ i {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
 }
-.left-nav .dialog-2 {
+.left-nav .dialog-fav {
   background: var(--yellow-main-color);
-  bottom: 10px;
+  bottom: 5px;
   color: var(--grey-main-color);
   display: block;
   left: 6px;
@@ -202,18 +208,18 @@ i {
   width: 93px;
   border-radius: 50px;
   height: 39px;
-  transform: translateY(-35px);
+  transform: translateY(-8px);
   transition: all 0.3s ease-out 0s;
-  -webkit-transform: translateY(-35px);
-  -moz-transform: translateY(-35px);
-  -ms-transform: translateY(-35px);
-  -o-transform: translateY(-35px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
 }
-.left-nav .dialog-2:before {
+.left-nav .dialog-fav:before {
   content: "";
   margin: auto;
   position: absolute;
@@ -232,11 +238,11 @@ i {
   background-color: rgb(239 239 239 / 0.2);
   max-width: max-content;
 }
-.left-nav a:hover + div.dialog {
+.left-nav a:hover + div.dialog-cart {
   opacity: 1;
   bottom: -3px;
 }
-.left-nav a[href="#Favourites"]:hover + div.dialog-2 {
+.left-nav a[href="#Favourites"]:hover + div.dialog-fav {
   opacity: 1;
   bottom: -3px;
 }
@@ -367,9 +373,18 @@ i {
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
 }
-
 .search-box:hover {
   border-color: #aaaaaa;
+}
+.search-box button {
+  background: none;
+  border: none;
+  padding: 4px 0px 7px 3px;
+  margin-left: -2px;
+}
+.search-box button span {
+  font-size: 25px;
+  color: grey;
 }
 
 input {
@@ -440,91 +455,6 @@ input:focus {
 }
 
 /* End Header */
-
-/* start mega-menu */
-.mega-menu {
-  position: absolute;
-  width: 92%;
-  left: 0;
-  padding: 30px;
-  background-color: white;
-  height: -webkit-fill-available;
-  z-index: 1;
-  display: flex;
-  gap: 40px;
-  opacity: 0;
-  transition: top var(--main-transition), opacity var(--main-transition);
-  -webkit-transition: top var(--main-transition), opacity var(--main-transition);
-  -moz-transition: top var(--main-transition), opacity var(--main-transition);
-  -ms-transition: top var(--main-transition), opacity var(--main-transition);
-  -o-transition: top var(--main-transition), opacity var(--main-transition);
-}
-
-@media (max-width: 767px) {
-  .mega-menu {
-    flex-direction: column;
-    padding: 5px;
-    width: 102%;
-    top: 115px;
-  }
-}
-.mega-menu .links {
-  min-width: 250px;
-  flex: 1;
-}
-.mega-menu .links li {
-  position: relative;
-}
-.mega-menu .links li:not(:last-child) {
-  border-bottom: 1px solid #e9e6e6;
-}
-
-@media (max-width: 767px) {
-  .mega-menu .links:first-of-type li:last-child {
-    border-bottom: 1px solid #e9e6e6;
-  }
-}
-
-@media (max-width: 767px) {
-  .mega-menu .links:first-of-type li:last-child {
-    border-bottom: 1px solid #e9e6e6;
-  }
-}
-.mega-menu .links li::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: #fafafa;
-  z-index: -1;
-  transition: 0.5s;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-}
-
-.mega-menu .links li:hover::before {
-  width: 100%;
-}
-
-.mega-menu .links li a {
-  color: var(--yellow-main-color);
-  padding: 15px;
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.mega-menu .links li a i {
-  margin-left: 9px;
-}
-.main-nav a:first-child:hover .mega-menu {
-  opacity: 0;
-}
-/* End mega-menu */
 
 .image-slider {
   position: relative;
@@ -633,7 +563,6 @@ input:focus {
   }
 }
 /* The dots/bullets/indicators */
-
 .dots-container {
   position: absolute;
   bottom: 30px;
@@ -650,7 +579,7 @@ input:focus {
   -ms-transition: 0.5s;
   -o-transition: 0.5s;
 }
-.dots-container button {
+.img-details button {
   transition: 0.2s;
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -658,7 +587,7 @@ input:focus {
   -o-transition: 0.2s;
   background-color: transparent;
 }
-.dots-container button:hover {
+.img-details button:hover {
   background-color: var(--grey-main-color);
 }
 @media screen and (max-width: 767px) {
@@ -814,6 +743,7 @@ input:focus {
   -moz-transform: translate(8px, -39px);
   -ms-transform: translate(8px, -39px);
   -o-transform: translate(8px, -39px);
+  transition: ease 1s;
   -webkit-transition: ease 1s;
   -moz-transition: ease 1s;
   -ms-transition: ease 1s;
@@ -870,56 +800,43 @@ input:focus {
 
 .box:hover .cirGroup1 {
   animation: 0.4s circles infinite;
-  -webkit-animation-name: circles;
-  -webkit-animation-duration: 0.4s;
+
   -webkit-animation: 0.4s circles infinite;
 }
 
 .box:hover .cirGroup2 {
   animation: 0.7s circles infinite;
-  -webkit-animation-name: circles;
-  -webkit-animation-duration: 0.7s;
+
   -webkit-animation: 0.7s circles infinite;
 }
 
 .box:hover .cirGroup3 {
   animation: 1.5s circles infinite;
-  -webkit-animation-name: circles;
-  -webkit-animation-duration: 1.5s;
+
   -webkit-animation: 1.5s circles infinite;
 }
 
 .box:hover .flame {
-  -webkit-animation-name: flame;
-  -webkit-animation-duration: 0.5s;
   animation: flame 0.5s ease-in-out infinite alternate;
   -webkit-animation: flame 0.5s ease-in-out infinite alternate;
 }
 
 .box:hover .flame2 {
-  -webkit-animation-name: flame;
-  -webkit-animation-duration: 0.4s;
   animation: flame 0.4s ease-in-out infinite alternate;
   -webkit-animation: flame 0.4s ease-in-out infinite alternate;
 }
 
 .box:hover .flame3 {
-  -webkit-animation-name: flame;
-  -webkit-animation-duration: 0.6s;
   animation: flame 0.6s ease-in-out infinite alternate;
   -webkit-animation: flame 0.6s ease-in-out infinite alternate;
 }
 
 .box:hover .sideFlame1 {
-  -webkit-animation-name: sideFlame1;
-  -webkit-animation-duration: 0.9s;
   animation: sideFlame1 0.9s ease-in-out infinite alternate;
   -webkit-animation: sideFlame1 0.9s ease-in-out infinite alternate;
 }
 
 .box:hover .sideFlame {
-  -webkit-animation-name: sideFlame1;
-  -webkit-animation-duration: 0.5s;
   animation: sideFlame 0.5s ease-in-out infinite alternate;
   -webkit-animation: sideFlame 0.5s ease-in-out infinite alternate;
 }
@@ -1298,9 +1215,6 @@ input:focus {
   cursor: pointer;
 }
 
-.wrapper .inside:hover {
-  /* border-radius: 0; */
-}
 .popular .container .more {
   color: white;
   background-color: var(--grey-main-color);
@@ -1518,8 +1432,6 @@ footer {
 }
 .newsletter button:hover {
   cursor: pointer;
-  /* border-radius: 10px 10px 70px 10px; */
-  /* box-shadow: 10px 0px 0px 2000px var(--grey-main-color); */
 }
 
 .social {
