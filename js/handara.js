@@ -20,7 +20,6 @@ function currentSlide(n) {
   showSlides();
   timer = _timer;
 }
-
 function showSlides() {
   let slides = document.querySelectorAll(".mySlides");
   let dots = document.querySelectorAll(".dots");
